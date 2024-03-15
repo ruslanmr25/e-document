@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId("user_id")->references("id")->on("users")->onDelete("CASCADE");
             $table->text("subject");
             $table->text("message");
-            $table->text("file_url");
+            $table->text("file_url")->nullable();
             $table->timestamps();
         });
     }
